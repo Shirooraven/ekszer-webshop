@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Alap alkalmazás téma: Material3 DayNight, NoActionBar -->
+    <style name="Theme.Ekszer_webshop" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Ez a pasztell-sárga gombok és egyéb primary elemek alapszíne -->
+        <item name="colorPrimary">#B3BFBF</item>
+        <!-- A primary fölötti szövegek/ikonok színe -->
+        <item name="colorOnPrimary">#000000</item>
+        <!-- Ha StatusBar átlátszó kell -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

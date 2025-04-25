@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "748285679440",
+    "project_id": "ekszer-webshop",
+    "storage_bucket": "ekszer-webshop.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748285679440:android:d78a8ab45b90699880be55",
+        "android_client_info": {
+          "package_name": "com.example.ekszer_webshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4Dayf1U1bDG5jpKzSW_uKq0aoAwq4W1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

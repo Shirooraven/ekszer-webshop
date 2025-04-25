@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ekszer_webshop" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Átlátszó status bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Esetleg ha Navigation bar-t is átlátszóvá akarod -->
+        <!-- <item name="android:navigationBarColor">@android:color/transparent</item> -->
+    </style>
+
+    <style name="Theme.Ekszer_webshop" parent="Base.Theme.Ekszer_webshop" />
+</resources>
