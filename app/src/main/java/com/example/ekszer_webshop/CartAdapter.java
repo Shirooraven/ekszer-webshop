@@ -34,9 +34,17 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         CartItem item = cartList.get(position);
 
         holder.textName.setText(item.getName());
-        holder.textCategory.setText("Kategória: " + item.getCategory());
-        holder.textPrice.setText("Ár: " + item.getPrice() + " Ft");
+        holder.textCategory.setText(item.getCategory());
         holder.textQuantity.setText("Mennyiség: " + item.getQuantity());
+
+        if (item.isSale()) {
+            long discounted = (long)(item.getPrice() * 0.85);
+            holder.textPrice.setText("Akciós ár: " + discounted + " Ft");
+            holder.textSale.setVisibility(View.VISIBLE);
+        } else {
+            holder.textPrice.setText("Ár: " + item.getPrice() + " Ft");
+            holder.textSale.setVisibility(View.GONE);
+        }
 
         Glide.with(holder.itemView.getContext())
                 .load(item.getImageUrl())
@@ -50,7 +58,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     }
 
     static class CartViewHolder extends RecyclerView.ViewHolder {
-        TextView textName, textCategory, textPrice, textQuantity;
+        TextView textName, textCategory, textPrice, textQuantity, textSale;
         ImageView imageView;
 
         public CartViewHolder(@NonNull View itemView) {
@@ -59,6 +67,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             textCategory = itemView.findViewById(R.id.textCartCategory);
             textPrice = itemView.findViewById(R.id.textCartPrice);
             textQuantity = itemView.findViewById(R.id.textCartQuantity);
+            textSale = itemView.findViewById(R.id.textCartSale); // új!
             imageView = itemView.findViewById(R.id.imageCartProduct);
         }
     }

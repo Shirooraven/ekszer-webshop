@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
@@ -18,22 +19,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <TextView android:id="@+id/textCartName"
+        <TextView
+            android:id="@+id/textCartName"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView android:id="@+id/textCartCategory"
+        <TextView
+            android:id="@+id/textCartCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView android:id="@+id/textCartPrice"
+        <TextView
+            android:id="@+id/textCartPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView android:id="@+id/textCartQuantity"
+        <TextView
+            android:id="@+id/textCartQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textCartSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akciós termék!"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:visibility="gone" />
     </LinearLayout>
 </LinearLayout>

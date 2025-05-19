@@ -7,28 +7,33 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="24dp">
 
         <TextView
+            android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rendelési adatok"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
 
         <EditText
             android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Név" />
+            android:hint="Teljes név"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/editAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Cím"
-            android:layout_marginTop="8dp" />
+            android:hint="Szállítási cím"
+            android:inputType="textPostalAddress"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/editPhone"
@@ -36,13 +41,17 @@
             android:layout_height="wrap_content"
             android:hint="Telefonszám"
             android:inputType="phone"
-            android:layout_marginTop="8dp" />
+            android:layout_marginBottom="24dp" />
 
         <Button
             android:id="@+id/buttonSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Megrendelem"
-            android:layout_marginTop="16dp" />
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
     </LinearLayout>
 </ScrollView>

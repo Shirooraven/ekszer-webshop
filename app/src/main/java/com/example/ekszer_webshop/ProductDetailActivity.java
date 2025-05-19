@@ -64,6 +64,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         cartItem.put("price", selectedProduct.getPrice());
         cartItem.put("imageUrl", selectedProduct.getImageUrl());
         cartItem.put("quantity", 1);
+        cartItem.put("sale", selectedProduct.isSale());
 
         db.collection("cart")
                 .document(uid)
