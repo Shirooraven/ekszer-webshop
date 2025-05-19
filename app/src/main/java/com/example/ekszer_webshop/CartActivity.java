@@ -100,6 +100,7 @@ totalText.setText("Végösszeg: " + total + " Ft");
 
           // Gomb engedélyezés, ha van termék
           Button continueButton = findViewById(R.id.buttonContinue);
+        
           continueButton.setEnabled(!cartItemList.isEmpty());
 
       })

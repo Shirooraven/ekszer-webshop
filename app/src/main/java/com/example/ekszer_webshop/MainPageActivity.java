@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainPageActivity extends AppCompatActivity {
     private TextView welcomeTextView;
-    private Button logoutButton, productsButton;
+    private Button logoutButton, productsButton, cartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,8 @@ public class MainPageActivity extends AppCompatActivity {
         welcomeTextView = findViewById(R.id.textViewWelcome);
         logoutButton    = findViewById(R.id.buttonLogout);
         productsButton  = findViewById(R.id.buttonProducts);
+        cartButton = findViewById(R.id.buttonCart); // ⬅️ új Kosár gomb
+
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -44,5 +46,11 @@ public class MainPageActivity extends AppCompatActivity {
             startActivity(new Intent(MainPageActivity.this, LoginActivity.class));
             finish();
         });
+
+        cartButton.setOnClickListener(v -> {
+    v.startAnimation(popAnim);
+    startActivity(new Intent(MainPageActivity.this, CartActivity.class));
+});
+
     }
 }
