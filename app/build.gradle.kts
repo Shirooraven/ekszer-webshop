@@ -39,17 +39,18 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
 
-    // BOM-ot platform() belül adjuk meg kézzel!
     implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
-
-    // Firebase dependencies verzió nélkül!
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.firestore)
+    implementation(libs.play.services.analytics.impl)
+
+    // ✅ Glide (Java projekthez Kotlin DSL-ben)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
-
-

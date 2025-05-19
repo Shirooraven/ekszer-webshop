@@ -22,11 +22,17 @@
             </intent-filter>
         </activity>
 
-        <!-- Ezek a te Activity-k -->
+        <!-- Ezek az Activity-k -->
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".ProductsActivity" />
+        <activity android:name=".ProductDetailActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".OrderActivity" />
+
+        
+
 
     </application>
 </manifest>
